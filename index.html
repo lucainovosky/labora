@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<meta name="author" content="luca">
+<meta name="copyright" content="2017&copy luca">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-widths, initial-scale=1.0" />
+
+<!-- collegtamento a fogli di stile -->
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="icon" href="img/iconcina.png" type="image/png">
+
+<!-- collegamento ai file js -->
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="js/fancybox/source/jquery.fancybox.pack.js"></script>
+<script src="js/main.js"></script>
+<script src="js/scrolla.jquery.min.js"></script>
+
+
+<!-- effetto nello scroll dei link ancora -->
+<script>
+    function goToByScroll (id){
+        $ ('html, body').animate({scrollTop: $("#"+id).offset().top}, 2000);
+    }
+</script>
+ <script> 
+     $(document).ready(function() { 
+         $("#datepicker").datepicker(); 
+     }); 
+</script>
+ <script> 
+     $(document).ready(function() { 
+         $("#datepicker2").datepicker(); 
+     }); 
+</script>
+    
+    <script>
+    	$(document).ready(function(e) {
+			$('#burger-button').click(function(e) {
+				e.preventDefault();
+				$('.menu-nascosto').stop().slideToggle();
+				$(this).find('i.fa').toggleClass('fa-bars').addClass('fa-times')
+				});
+			});
+    </script>
+
+    
+    
+<!-- font -->
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    
+<!-- collegamento fontawesome-->    
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+<title>B&amp;b Trieste</title>
+
+</head>
+
+<body>
+    
+    <header>
+        
+        <nav class="menuetto">
+            <ul class="primomenu">
+                <li><a href="#chisiamo" title="Chi siamo" onclick="goToByScroll('chisiamo')"><i class="fa fa-users" aria-hidden="true"></i>Chi siamo</a></li>
+                <li><a href="#foto" title="Foto" onclick="goToByScroll('foto')"><i class="fa fa-camera" aria-hidden="true"></i>Foto Gallery</a></li>
+            </ul>
+            <ul class="secondomenu">
+                <li><a href="#contatti" title="Contatti" onclick="goToByScroll('contatti')"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contatti</a></li>
+                <li><a href="#dove siamo" title="Dove siamo" onclick="goToByScroll('dovesiamo')"><i class="fa fa-map-o" aria-hidden="true"></i>
+                Dove Siamo</a></li>
+            </ul>
+            <div class="clearer"></div>
+        </nav>
+        <nav class="fasciamenu">
+            <hr id="lineaverde1">
+            <ul class="menuprincipale">
+                <ul class="menuprincipale1">
+                    <li><a href="" target="_blank" title="">Stanze</a></li>
+                    <li><a href="" target="_blank" title="">Offerte</a></li>
+                </ul>
+                <div class="logoprincipale"><a href="index.html"><img src="img/logo.png" width="200px" height="200px" alt="logo La Bora" /></a></div>
+                <ul class="menuprincipale2">
+                    <li><a href="" target="_blank" title="">Cosa Fare</a></li>
+                    <li><a href="" target="_blank" title="">Prenota</a></li>
+                </ul>
+            </ul>            
+            <div class="clearer"></div>
+        <hr id="lineaverde2">
+        </nav>
+        
+        <a id="burger-button"><i class="fa fa-bars"></i></a>
+        <nav class="blocco-nascoto">
+            <ul class="menu-nascosto">
+                <li><a href="#" target="_blank" title="">Stanze</a></li>
+                <li><a href="#" target="_blank" title="">Offerte</a></li>
+                <li><a href="#" target="_blank" title="">Cosa Fare</a></li>
+                <li><a href="#" target="_blank" title="">Prenota</a></li>
+            </ul>
+        </nav>
+
+        <div class="fasciaread">
+        	<div id="read"><a href="#chisiamo" title="scopri di più" onclick="goToByScroll('chisiamo')">Scopri</a></div>
+        </div>
+    </header>
+    
+    <main>
+        
+        <section class="chisiamo" id="chisiamo">
+            <div class="row1titolo">
+                <div class="logochisiamo animate" data-animate="bounceIn" data-duration="1.0s" data-delay="0.1s" data-offset="100"></div> <h1>A Trieste, tra mare e relax</h1>
+            </div>
+            <div class="row1">
+                <div class="testochisiamo columnrow1sx">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan urna ac sapien sagittis, at ultrices erat dignissim. Curabitur sed lacinia nisi. Mauris laoreet ante eros, sed bibendum 			            nibh lobortis eu. Etiam id nunc eget erat ullamcorper malesuada. Duis dolor nisi, elementum molestie massa ut, accumsan aliquam est. Suspendisse potenti.</p> 
+                    <h3>Aenean dolor sem, congue sit amet vestibulum et</h3>        
+                </div>
+                <div class="columnrow1sx">
+                    <div class="personale"></div>                
+                </div>
+            </div>
+        </section>
+        
+        <section class="foto" id="foto">
+            <div class="row2titolo">
+                <span class="logofoto animate" data-animate="bounceIn" data-duration="1.0s" data-delay="0.1s" data-offset="100"></span> <h2>Sogno a occhi aperti</h2>
+            </div>
+            <div class="row2">
+                <div class="galleriafoto">
+                <ul id="gallery">
+                    <li><a class="fancy hovereffect img-responsive" rel="gallery" href="img/1.jpg" >
+                    <img src="img/1s.jpg" alt="" width="200px" height="200px"><span class="overlay"></span></a></li>                    
+                    <li class="spaziofoto"><a class="fancy hovereffect img-responsive" rel="gallery" href="img/2.jpg">
+                    <img src="img/2s.jpg" width="200px" height="200px"><span class="overlay"></span></a></li>        	
+                    <li class="last"><a class="fancy hovereffect img-responsive" rel="gallery" href="img/3.jpg">
+                    <img src="img/3s.jpg" width="200px" height="200px"><span class="overlay"></span></a></li>
+                    <li><a class="fancy hovereffect img-responsive" rel="gallery" href="img/4.jpg">
+                    <img src="img/4s.jpg" width="200px" height="200px"><span class="overlay"></span></a></li>
+                    <div class="hidden"><li class="spaziofoto"><a class="fancy hovereffect img-responsive" rel="gallery" href="img/5.jpg">
+                    <img src="img/5s.jpg" width="200px" height="200px"><span class="overlay"></span></a></li></div>
+                    <div class="hidden"><li class="last"><a class="fancy hovereffect img-responsive" rel="gallery" href="img/6.jpg">
+                        <img src="img/6s.jpg" width="200px" height="200px"><span class="overlay"></span></a></li></div>
+                    <div class="hidden"><li><a class="fancy hovereffect img-responsive" rel="gallery" href="img/7.jpg">
+                        <img src="img/7s.jpg" width="200px" height="200px"><span class="overlay"></span></a></li></div>
+                    <div class="hidden"><li class="spaziofoto hidden"><a class="fancy hovereffect img-responsive" rel="gallery" href="img/8.jpg">
+                        <img src="img/8s.jpg" width="200px" height="200px"><span class="overlay"></span></a></li></div>
+                    <div class="hidden"><li class="last hidden"><a class="fancy hovereffect img-responsive" rel="gallery" href="img/9.jpg">
+                        <img src="img/9s.jpg" width="200px" height="200px"/><span class="overlay"></span></a></li></div>
+                </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section class="dovesiamo" id="dovesiamo">
+                <div class="row3titolo">
+                    <span class="logodovesiamo animate" data-animate="bounceIn" data-duration="1.0s" data-delay="0.1s" data-offset="100"></span><h2>Vieni a trovarci</h2>
+                </div>
+                <div class="row3">
+                    <div class="columnrow3sx">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2788.6768730344443!2d13.77003301541481!3d45.657310428558205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477b6b694c1ef911%3A0x44a52326bf8deb46!2sTrieste+Centrale!5e0!3m2!1sit!2sit!4v1498240921679" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                <div class="columnrow3dx">
+                    <div class="icone-dove">
+                        <div class="car">
+                        <i class="fa fa-car animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.2s" data-offset="100" aria-hidden="true"></i>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam felis leo, rhoncus condimentum interdum viverra, fermentum nec ex. Nullam tempor tristique orci, eget condimentum leo gravida eu. Quisque ipsum ex, aliquam eget elit ac, ullamcorper euismod sapien.</p>
+                        </div>
+                        <div class="train">
+                        <i class="fa fa-train animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.2s" data-offset="100" aria-hidden="true"></i>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam felis leo, rhoncus condimentum interdum viverra, fermentum nec ex. Nullam tempor tristique orci, eget condimentum leo gravida eu. Quisque ipsum ex, aliquam eget elit ac, ullamcorper euismod sapien.</p>
+                        </div>
+                        <div class="airplain">
+                        <i class="fa fa-plane animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.2s" data-offset="100" aria-hidden="true"></i>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam felis leo, rhoncus condimentum interdum viverra, fermentum nec ex. Nullam tempor tristique orci, eget condimentum leo gravida eu. Quisque ipsum ex, aliquam eget elit ac, ullamcorper euismod sapien.</p>
+                        </div>
+                        <div class="clearer"></div>                
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contattaci" id="contatti">
+            <div class="row4titolo">
+                <span class="logocontatti animate" data-animate="bounceIn" data-duration="1.0s" data-delay="0.1s" data-offset="100"></span> <h2>Scrivici!</h2>
+            </div>
+                <div class="row4 row4tablet">
+                    <div class="contattisx">
+                        <p>Compila il form con i tuoi dati</p>
+                        <p>Chiamaci o mandaci una mail, un messaggio</p>
+                        <p>Oppure mandaci un piccione viaggiatore</p>
+                        <p>Noi risponderemo a ogni tua esigenza</p>
+                    </div>
+                    <div class="contatticn">
+                        <div class="form-contatti">
+                            <form name="iscrizione" action="#" method="post">
+                                <table>
+                                    <tr>
+                                        <td colspan="2"><input name="nome" type="text" placeholder="Nome"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><input name="cognome" type="text" placeholder="Cognome"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><input name="email" type="email" placeholder="Email"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><input name="tel" type="tel" placeholder="Telefono"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input name="data-arrivo" id="datepicker" placeholder="Data di arrivo"/></td>
+                                        <td><input name="data-partenza" id="datepicker2" placeholder="Data di partenza"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><textarea name="testo" placeholder="inserisci un commento"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input name="invia" type="submit" value="Invia"> </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>    
+                    <div class="contattidx">
+                        <h3>Contatti</h3>
+                        <h3>B&amp;b Trieste</h3>
+                        <p>via Roma 1, 34151<br>
+                        Trieste<br>
+                        tel +39 800 800 800<br>
+                        mobile +39 349 0000000<br>
+                        <a href="mailto:info@bedandbreakfasttrieste.com">info@bedandbreakfasttrieste.com</a></p>
+                    </div>
+                    </div>
+        </section>           
+    </main>
+    
+    <footer>
+        <div class="logoprincipalefooter"><a href="index.html"><img src="img/logo.png" width="220px" height="220px" alt="logo La Bora" /></a></div>
+        <div class="loghifooter">
+            <div class="rigaloghi">
+                <div class="logofacebook"></div>
+                <div class="logoinsta"></div>
+                <div class="logotrip"></div>
+            </div>    
+            <div class="clearer"></div>            
+        </div>
+        <h6>Copyright 2017 &copy; Noventa Luca</h6>    
+    </footer>
+    
+    <script>
+	   $('.animate').scrolla({
+		  mobile: false,
+		  once: false
+	   });
+    </script>
+
+</body>
+    
+</html>

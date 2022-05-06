@@ -1,0 +1,1040 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+    font-family: 'Nunito', sans-serif;
+    color: #383530;
+}
+
+.clearfix:before, .clearfix:after {
+	content:"";
+	display: table;
+}
+
+.clearfix:after {
+	clear:both;
+}
+
+.clearer {
+	clear:both;
+}
+
+/*regole necessarie per impostare elementi a tutto schermo, a prescindere dalle dmensioni*/
+/*body, html { 
+    height: 100%;
+}*/
+
+
+/*------------------------------------------
+                  HEADER
+--------------------------------------------*/
+
+header {
+	background-image: url(../img/sfondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+	/*height: 100%; serve per impostare a tutto schermo*/
+    width: 100%;
+    height: 800px;
+	padding-top: 0.04px;
+    margin-top: 0;
+    position: relative;
+}
+
+header i {
+    display: inline !important;
+    color: white;
+}
+.navbar, navbar-default {
+    display:none;
+}
+
+.menuetto { /*primo menu -più piccolo- */
+	width: 100%;
+	height: 40px;
+	margin-top: 30px;
+	padding-top: 0.04px;
+}
+
+.primomenu { /*due voci a sx*/
+	list-style-type: none;
+	list-style-position: inside;
+	margin-left: 20%;
+	width: 30%;
+    float: left;
+}
+
+.primomenu a {
+	text-decoration: none;
+	color: white;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.primomenu li {
+	float: left;
+    margin-right: 50px;
+}
+
+.secondomenu { /*due voci di dx*/
+	list-style-type: none;
+	list-style-position: inside;
+	margin-right: 20%;
+	width: 30%;
+	height: 10px;
+    float: right;
+}
+
+.secondomenu a {
+	text-decoration: none;
+	color: white;
+}
+
+.secondomenu li {
+	float: right;
+    margin-left: 50px;
+}
+
+.primomenu a:hover , .primomenu a:active , .secondomenu a:hover , .secondomenu a:active {
+    border-bottom: 2px solid white;
+}
+
+.fasciamenu { /*menu principale*/
+	background-color: white;
+	width: 100%;
+	height: 90px;
+}
+
+.menuprincipale1 { /*due elementi a sx*/
+	list-style-type: none;
+	list-style-position: inside;
+	margin-left: 20%;
+	width: 30%;
+	height: 50px;
+    float: left;
+}
+
+.menuprincipale1 a {
+	text-decoration: none;
+	color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.menuprincipale1 li {
+	float: left;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.menuprincipale2 { /*due elementi a dx*/
+	list-style-type: none;
+	list-style-position: inside;
+	margin-right: 18%;
+	width: 30%;
+	height: 50px;
+    float: right;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.menuprincipale2 a {
+	text-decoration: none;
+	color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.menuprincipale2 li {
+	float: right;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#lineaverde1 {
+    background-color: #155636;
+    height: 2px;
+    width: 100%;
+    border: none;
+    box-shadow: 0px 5px 15px #155636;
+    margin-left: 0;
+    margin-top: 10px;
+    float: left;
+    
+}
+
+#lineaverde2 {
+    background-color: #155636;
+    height: 2px;
+    width: 100%;
+    border: none;
+    margin-left: 0;
+    margin-top: 14px;
+    box-shadow: 5px 0px 15px #155636;
+}
+
+i {
+    padding-right: 10px;
+}
+
+.fasciaread {
+	width: 100%;
+	height: 70px;
+	margin-top: 400px;
+}
+
+#read {
+    margin: 0 auto;
+    width: 200px;
+    height: 60px;
+    background-color: white;
+	line-height: 60px;
+	text-align:center;
+}
+
+#read a {
+	color: black;
+	text-decoration: none;
+	border: 2px solid #155636;
+	padding: 10px 70px;
+	box-shadow: 0px 0px 5px #155636 inset;
+    position: relative;
+}
+
+.logoprincipale img{
+    position: absolute;
+    /*regole per posizionare orizzontalmente un div in absolute*/
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    /**/
+    top: -50px;
+}
+
+.menuprincipale {
+    position: relative;
+}
+
+.menuprincipale:hover li a {/*effetto sul menu quando si passa su un link*/
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    transition-property:all;
+	transition-duration: 300ms;
+	transition-timing-function: linear;
+}
+
+.menuprincipale li a:hover{ /*effetto sul singolo link*/
+    filter: none;
+    -webkit-filter: none;
+    transition-property:all;
+	transition-duration: 300ms;
+	transition-timing-function: linear;
+}
+
+#read a::after {
+content:'';
+width:0; height:0;
+border-top:20px solid #155636;
+border-left:20px solid transparent;
+border-right:20px solid transparent;
+border-bottom:20px solid transparent;
+position:absolute;
+top: 42px;
+/*regole per centrare orizzonatlmente un elemento in absolute, si da un mergine laterlae al 50%, poi si toglie la larghezza*/
+left:50%;
+margin-left:-20px;
+}
+
+#burger-button {
+	display:block;
+	width: 32px;
+	height:35px;
+	color:white;
+	font-size:35px;
+	text-align:center;
+	line-height:35px;
+	position:absolute;
+	cursor:pointer;
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+	}
+
+.menu-nascosto {
+    display:none;
+}
+
+.blocco-nascosto {
+    display: none;
+}
+
+.blocco-nascosto {
+    width: 100%;
+    height: 400px;
+}
+
+.menu-nascosto { /*due elementi a sx*/
+	list-style-type: none;
+	list-style-position: inside;
+	margin: 0 auto;
+	width: 200px;
+	height: 50px;
+    float: left;
+    line-height: 60px;
+    position: relative;
+}
+
+.menu-nascosto li a {
+	text-decoration: none;
+	color: black;
+    text-transform: uppercase;
+	padding: 10px 55px;
+    background-color: white;
+    width: 240px;
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+.menu-nascosto li {
+	float: left;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 200px;
+    height: 60px;
+    background-color: white;
+    border-bottom: 7px solid #155636;
+}
+
+.menu-nascosto {
+    position: relative;
+    margin-top: 60px;
+}
+
+.menu-nascosto:hover li a {/*effetto sul menu quando si passa su un link*/
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    transition-property:all;
+	transition-duration: 300ms;
+	transition-timing-function: linear;
+}
+
+.menu-nascosto li a:hover{ /*effetto sul singolo link*/
+    filter: none;
+    -webkit-filter: none;
+    transition-property:all;
+	transition-duration: 300ms;
+	transition-timing-function: linear;
+}
+
+
+/*------------------------------------------
+                  MAIN
+--------------------------------------------*/
+
+/*------------------------------------------
+                  CHI SIAMO
+--------------------------------------------*/
+
+.row1 {
+    width:100%;
+	display:table;
+	table-layout:fixed;
+}
+
+.row1titolo {
+    width:100%;
+	overflow:hidden;
+	display:table;
+	vertical-align:middle; 
+    position: relative;
+}
+
+.columnrow1sx {
+    width:50%;
+	overflow:hidden;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.columnrow1sx p {
+    padding: 10% 10% 0 10%;
+}
+
+.columnrow1sx h3 {
+    padding: 0 10%;
+}
+
+.columnrow1dx {
+    width:50%;
+	overflow:hidden;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.chisiamo {
+    /*width: 70%;
+    margin: 0 auto;*/
+    height: auto;
+    padding-top: 0.04px;
+}
+
+.logochisiamo {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-image: url(../img/logochisiamo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    top: 35px;
+    left: 10%;
+    z-index: 10;
+}
+
+.chisiamo h1 {
+    z-index: 1;
+	overflow:hidden;
+	display:table;
+	vertical-align:middle; 
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    font-size: 48px;
+    margin-top: 100px;
+    margin-bottom: 80px;
+    font-family: 'Permanent Marker', cursive;
+    position: relative;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#047bf2+10,049ce7+100 */
+background: rgb(4,123,242); /* Old browsers */
+background: -moz-linear-gradient(-45deg, rgba(4,123,242,1) 10%, rgba(4,156,231,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(4,123,242,1) 10%,rgba(4,156,231,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(4,123,242,1) 10%,rgba(4,156,231,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#047bf2', endColorstr='#049ce7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.chisiamo p {
+    line-height: 32px;
+    font-size: 18px;
+    margin-top: -100px;
+}
+
+.personale {
+    /*float: right;*/
+    background-image: url(../img/reception.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.chisiamo h3 {
+    margin: 40px 0;
+    font-family: 'Permanent Marker', cursive;
+
+}
+
+.testochisiamo {
+    /*width: 400px;
+    float: left;
+    height: 400px;*/
+}
+
+
+/*------------------------------------------
+                  FOTO  
+--------------------------------------------*/
+
+.row2titolo {
+    width:100%;
+	overflow:hidden;
+	display:table;
+	vertical-align:middle;
+    position: relative;
+}
+
+.foto {
+    z-index: 10;
+    /*background-color: #999688;*/
+    width: 100%;
+    height: 1100px;
+    padding-top: 0.04px;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#047bf2+10,049ce7+100 */
+background: rgb(4,123,242); /* Old browsers */
+background: -moz-linear-gradient(-45deg, rgba(4,123,242,1) 10%, rgba(4,156,231,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(4,123,242,1) 10%,rgba(4,156,231,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(4,123,242,1) 10%,rgba(4,156,231,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#047bf2', endColorstr='#049ce7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.row2 {
+    width:100%;
+	display:table;
+	table-layout:fixed;
+}
+
+.foto h2 {
+    z-index: 1;
+    width: 70%;
+    margin: 0 auto;
+    overflow:hidden;
+	display:table;
+	vertical-align:middle; 
+    background-color: white;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 60px;
+    margin-bottom: 80px;
+    font-family: 'Permanent Marker', cursive;
+    position: relative;
+}
+
+.logofoto {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-image: url(../img/logofoto.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    top: 35px;
+    left: 10%;
+    z-index: 10;
+}
+
+.galleriafoto {
+	width: 900px;
+	height: 800px;
+	margin: 0 auto;
+	/*background-color: yellow;*/
+}
+
+#gallery li {
+    list-style-position: inside;
+    list-style: none;
+    float: left;
+    border: 10px solid white;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 60px;
+}
+
+#gallery a {
+    cursor: pointer;
+}
+
+
+.spaziofoto {
+    margin: 0 120px;
+}
+
+/*-------effetto hover su foto -----------*/
+
+.hovereffect {
+width:100%;
+height:100%;
+float:left;
+overflow:hidden;
+position:relative;
+text-align:center;
+cursor:default;
+}
+
+.hovereffect .overlay {
+width:100%;
+height:100%;
+position:absolute;
+overflow:hidden;
+top:0;
+left:0;
+opacity:0;
+background-color:rgba(0,0,0,0.5);
+-webkit-transition:all .4s ease-in-out;
+transition:all .4s ease-in-out
+}
+
+.hovereffect img {
+display:block;
+position:relative;
+-webkit-transition:all .4s linear;
+transition:all .4s linear;
+}
+
+
+.hovereffect:hover img {
+-ms-transform:scale(1.2);
+-webkit-transform:scale(1.2);
+transform:scale(1.2);
+}
+
+.hovereffect:hover .overlay {
+opacity:1;
+filter:alpha(opacity=100);
+}
+
+
+/*------------------------------------------
+                  DOVE SIAMO  
+--------------------------------------------*/
+
+.dovesiamo {
+    width: 100%;
+    margin: 0 auto;
+    height: 1260px;
+    background-color: white;
+    padding-top: 0.04px;
+}
+
+.row3titolo {
+    width:100%;
+	overflow:hidden;
+	display:table;
+	vertical-align:middle;
+    position: relative;
+}
+
+.dovesiamo h2 {
+    z-index: 1;
+    width: 70%;
+    margin: 0 auto;
+    overflow:hidden;
+	display:table;
+	vertical-align:middle;
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 60px;
+    margin-bottom: 160px;
+    font-family: 'Permanent Marker', cursive;
+    position: relative;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#047bf2+10,049ce7+100 */
+    background: rgb(4,123,242); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(4,123,242,1) 10%, rgba(4,156,231,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(4,123,242,1) 10%,rgba(4,156,231,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(4,123,242,1) 10%,rgba(4,156,231,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#047bf2', endColorstr='#049ce7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.logodovesiamo {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-image: url(../img/logodove.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    top: 35px;
+    left: 10%;
+    z-index: 10;
+}
+
+.row3 {
+    width:100%;
+	display:table;
+	table-layout:fixed;
+    margin-top: -50px;
+}
+
+.columnrow3sx {
+    width:50%;
+	overflow:hidden;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.columnrow3dx {
+    width:50%;
+	overflow:hidden;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+/*regola FONDAMENTALE per centrare icone fontawesome*/
+[class^="fa"], [class*="fa-car fa-train fa-plan"] {
+    display: inline-block;
+    width: 100%;
+}
+
+.icone-dove i {
+    font-size: 70px;
+    text-align: center;
+}
+
+.car , .airplain , .train {
+    width: 50%;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.car p, .airplain p, .train p {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.dovesiamo iframe {
+    /*width: 50%;
+    float: left;*/
+    height: 820px;
+    width: 100%;
+}
+
+
+
+/*------------------------------------------
+                  CONTATTI  
+--------------------------------------------*/
+
+.contattaci {
+    /*background-color: #155636;*/
+    width: 100%;
+    height: 950px;
+    padding-top: 0.04px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#047bf2+10,049ce7+100 */
+    background: rgb(4,123,242); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(4,123,242,1) 10%, rgba(4,156,231,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(4,123,242,1) 10%,rgba(4,156,231,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(4,123,242,1) 10%,rgba(4,156,231,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#047bf2', endColorstr='#049ce7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.row4titolo {
+    width:100%;
+	overflow:hidden;
+	display:table;
+	vertical-align:middle;
+    position: relative;
+}
+
+.contattaci h2 {
+    width: 70%;
+    margin: 0 auto;
+    overflow:hidden;
+	display:table;
+	vertical-align:middle;
+    background-color: white;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 60px;
+    margin-bottom: 80px;
+    font-family: 'Permanent Marker', cursive;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.logocontatti {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-image: url(../img/logocontatti.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    top: 35px;
+    left: 10%;
+    z-index: 10;
+    
+}
+
+.row4 {
+    width:100%;
+	display:table;
+	table-layout:fixed;
+}
+
+.contattisx {
+    /*background-color: rosybrown;*/
+    /*float: left;*/
+    /*width: 25%;*/
+    height: 600px;
+    width:30%;
+	overflow:hidden;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.contattisx p {
+    margin-bottom: 20px;
+    line-height: 24px;
+    color: white;
+    padding: 0 0 0 40%;
+    font-size: 18px;
+}
+
+.contatticn {
+    /*float: left;*/
+    width: 40%;
+    margin-left: 10%;
+	overflow:hidden;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.contattaci table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+input[name="nome"], input[name="cognome"], input[name="email"], input[name="tel"] {
+    width: 390px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin: 0 20px 20px 0;
+    font-size: 14px;
+}
+
+input[name="data-arrivo"], input[name="data-partenza"] {
+    border: none;
+    padding-left: 10px;
+    width: 180px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 0 20px 20px 0;
+    font-size: 14px;
+}
+
+textarea {
+    resize: none;
+    width: 390px;
+    height: 150px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 0 0 10px;
+    font-size: 14px;
+}
+
+input[name="invia"] {
+    border: none;
+    padding-left: 10px;
+    width: 180px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: white;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#25704a+0,155636+100 */
+    background: rgb(37,112,74); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(37,112,74,1) 0%, rgba(21,86,54,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(37,112,74,1) 0%,rgba(21,86,54,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(37,112,74,1) 0%,rgba(21,86,54,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25704a', endColorstr='#155636',GradientType=0 ); /* IE6-9 */
+}
+
+input[name="invia"]:hover, input[name="invia"]:active {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#25704a+0,073f23+52 */
+    background: rgb(37,112,74); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(37,112,74,1) 0%, rgba(7,63,35,1) 52%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(37,112,74,1) 0%,rgba(7,63,35,1) 52%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(37,112,74,1) 0%,rgba(7,63,35,1) 52%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25704a', endColorstr='#073f23',GradientType=0 ); /* IE6-9 */
+}
+
+.contattidx {
+    width: 30%;
+	overflow:hidden;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.contattaci h3, .contattaci p, .contattaci a  {
+    color: white;
+}
+
+.contattaci a:hover, .contattaci a:active {
+    text-decoration: none;
+}
+
+/*------------------------------------------
+                  FOOTER  
+--------------------------------------------*/
+
+footer {
+    /*background-color: #155636;*/
+    background-color: white;
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+
+.loghifooter {
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 50px;
+    display: table;
+	table-layout:fixed;
+	overflow:hidden;
+}
+
+.rigaloghi {
+    display: block;
+    width:445px;;
+    height: 140px;
+	overflow:hidden;
+    margin: 0 auto;
+}
+
+.logofacebook {
+    background-image: url(../img/facebook.png);
+    width: 135px;
+    height: 135px;
+    background-position: center center;
+    background-size: cover;
+    float:left;
+    cursor: pointer;
+}
+
+.logoinsta {
+    background-image: url(../img/insta%20icona.png);
+    width: 140px;
+    height: 140px;
+    background-position: center center;
+    background-size: cover;
+    float:left;
+    margin: 0 20px 0 20px;
+    cursor: pointer;
+}
+
+.logotrip {
+    background-image: url(../img/trip%20icona.png);
+    width: 130px;
+    height: 130px;
+    background-position: center center;
+    background-size: cover;
+    float:left;
+    cursor: pointer;
+}
+
+footer h6 {
+    color: #155636;
+    font-size: 18px;
+    font-weight: lighter;
+    margin-top: 25px;
+    margin-left: 100px;   
+}
+
+.logoprincipalefooter {
+    position: absolute;
+    left: 100px;
+    top: -150px;
+}
+
+#gallery img {
+	width: 100%;
+	height: auto;
+	}
+
+
+@media only screen and (min-width: 992px) and (max-width:1199px) {
+    /*body {background-color: red;}*/
+    .primomenu {margin-left: 15%; width: 30%}
+    .primomenu li{margin-right: 20px;}
+    .secondomenu {margin-right: 15%; width: 30%}
+    .secondomenu li{margin-left: 20px;}
+    .menuprincipale1 {margin-left: 10%;}
+    .menuprincipale2 {margin-right: 5%; width: 42%;}
+    .logochisiamo, .logodovesiamo, .logofoto, .logocontatti {left: 2%;}
+    .icone-dove p {font-size: 14px;}
+    .contattisx p {padding: 0 10% 0 20%;}
+    .contattidx p, .contattidx h3  {padding: 0 20% 0 10%;}
+    .logoprincipalefooter {left: 50px;}
+    .row4 {margin-top:-40px;}
+    .personale {width:450px; height:400px;}
+    .logofacebook, .logoinsta, .logotrip {width:100px; height:100px;}
+    .rigaloghi {width:340px;}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /*body {background-color: yellow;}*/
+    .primomenu {margin-left: 10%; width: 40%}
+    .primomenu li{margin-right: 20px;}
+    .secondomenu {margin-right: 10%; width: 40%}
+    .secondomenu li{margin-left: 20px;}
+    .menuprincipale1 {margin-left: 10%; width:40%;}
+    .menuprincipale2 {margin-right: 5%; width:42%;}
+    .menuprincipale1 a, .menuprincipale2 {font-size: 16px;}
+    .foto {height: auto;}
+    .chisiamo h1, .foto h2, .dovesiamo h2, .contattaci h2 {font-size: 30px;}
+    .logochisiamo, .logodovesiamo, .logofoto, .logocontatti  {width:100px; height:100px;}
+    .testochisiamo p, .testochisiamo h3 {font-size:16px;}
+    .columnrow1sx, .columnrow1dx {display:table; width:100%;}
+    .columnrow1sx p {margin-top: -70px;}
+    .personale {width: 400px; height: 300px; margin-bottom: 30px;}
+    .row2 {width:750px; display:table; table-layout:fixed; margin: 0 auto;}
+    .galleriafoto {width:750px;}
+    #gallery li {width:225px; height:225px; margin: 0 65px 40px 65px;}
+    .icone-dove p {display: block; font-size: 14px; margin-top: 0 auto; width:250px;}
+    .icone-dove {width:750px; margin:0 auto;}
+    .icone-dove i {font-size:40px;}
+    .contatticn {width:60%;}
+    .contattidx {width:40%;}
+    .contattisx {display:none;}
+    .logoprincipalefooter {display:none;}
+    .columnrow3sx {display:table; width: 100%; height:350px;}
+    .columnrow3sx iframe {height:350px;}
+    .columnrow3dx {display:table; width: 100%;}
+    .car, .train, .airplain {display:block; float:left; width:250px; margin-top: 50px;}
+    .dovesiamo {height: 960px; z-index: 1;}
+
+}
+
+@media  only screen and (max-width:767px) {
+    /*body {background-color: rosybrown;}*/
+    .primomenu li, .secondomenu li {display:none;}
+    .logochisiamo, .logodovesiamo, .logofoto, .logocontatti  {z-index: 1000; width:100px; height:100px; top: -20px; left:50%; margin-top: 30px; margin-left: -50px;}
+    .menuprincipale1, .menuprincipale2 {display:none;}
+    .row1titolo h1 {margin-bottom:0px;}
+    .chisiamo h1, .foto h2, .dovesiamo h2, .contattaci h2 {font-size: 20px;}
+    .testochisiamo {margin-top: 50px; z-index:100; padding-top:50px;}
+    .testochisiamo p, .testochisiamo h3 {font-size:16px;}
+    .columnrow1sx, .columnrow1dx {display:table; width:100%;}
+    .columnrow1sx p {margin-top: -70px;}
+    .personale {width: 250px; height: 200px; margin-bottom: 30px;}
+    .galleriafoto {width:250px;}
+    #gallery li {width:225px; height:225px; margin: 0 auto; display:block; float:none; margin-bottom: 40px;}
+    .foto {height:1400px;}
+    .hidden {float:none; display:none;}
+    .columnrow3dx {display:none;}
+    .columnrow3sx {display:table; width: 100%; height:450px;}
+    .columnrow3sx iframe {height:450px;}
+    .dovesiamo {height: 800px;}
+    .logoprincipalefooter {display:none;}
+    .contattisx {display:none;}
+    .contatticn {display:table; table-layout:fixed; overflow:hidden; width:99%; margin-left: 1%;}
+    .contattidx {display:table; width:95%; margin-left: 5%; margin-top: 80px;}
+    .contattaci {height:1100px;}
+    .logofacebook, .logoinsta, .logotrip {width:80px; height:80px;}
+    .rigaloghi {width:280px;}
+    #lineaverde2 {margin-top:64px;}
+    input[name="nome"], input[name="cognome"], input[name="email"], input[name="tel"], textarea[name="testo"] {width:250px;}
+    input[name="data-arrivo"], input[name="data-partenza"] {width:105px; margin-bottom: 20px; font-size: 12px;}
+    input[name="data-partenza"] {margin-left:-35px;}
+    .row1titolo, .row2titolo, .row3titolo, .row4titolo {padding-top: 20px;}
+    #burger-button {display:block;}
+    footer h6 {margin-left: 5%;}
+}
+
+/******burger button*************/
+
